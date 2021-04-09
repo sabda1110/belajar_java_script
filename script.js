@@ -1,10 +1,11 @@
-alert("Selamat Datang"); //hanya menampilkan popup
-var lagi = true;
-
-while(lagi==true)
+function volum(a,b) //memberikan function declaration
 {
-	var nama =prompt("Masukan Nama : "); //memberikan inputan
-	alert("Nama : "+nama);
-	lagi = confirm("Lagi ? "); //memberikan nilai true atau false
+	var hasil,volum1,volum2; 
+	volum1=a*a*a;
+	volum2=b*b*b;
+	hasil=volum1+volum2;
+	return hasil;
 }
-alert("Terima Kasih");
+
+
+alert("Hasil Penjumlahan 2 Kubus = "+volum(8,3));

@@ -1,15 +1,7 @@
-function tambah() //memberikan function declaration
+function volum(a,b) //memberikan function declaration
 {
-     var hasil=0;
-     for(var i=0; i<arguments.length;i++) //argument.length berguna untuk menghitung jumlah argument yang masuk
-     {
-     	hasil += arguments[i];
-     }
-     return hasil;
+	return a*a*a+b*b*b
 }
 
-var total =tambah(1,2,3);
-console.log(total);
 
-
-
+alert("Hasil Penjumlahan 2 Kubus = "+volum(8,3));

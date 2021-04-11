@@ -2,11 +2,13 @@ function menampilkan(a)
 {
 	if(a==0)
 	{
-		return;  //base case untuk memberhentikan rekursif
+		return 1;  //base case untuk memberhentikan rekursif
 	}
-	console.log(a);
-	return menampilkan(a-1); //rekursif (memanggil diri nya lagi)
+	
+	return a * menampilkan(a-1); //rekursif (memanggil diri nya lagi)
 }
 
 
-menampilkan(10);
+var hasil = menampilkan(5);
+
+console.log(hasil)

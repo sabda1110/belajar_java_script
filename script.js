@@ -1,10 +1,12 @@
-var a =2; //global scope merupakan variabel yang dapat di gunakan di mana saja
- 
-
-function tambah()
+function menampilkan(a)
 {
-	var b =1 //functio scope merupakan varibael yang hanya bisa di gunakan di function
-
+	if(a==0)
+	{
+		return;  //base case untuk memberhentikan rekursif
+	}
+	console.log(a);
+	return menampilkan(a-1); //rekursif (memanggil diri nya lagi)
 }
 
-console.log(a);
+
+menampilkan(10);

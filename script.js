@@ -1,7 +1,10 @@
-function volum(a,b) //memberikan function declaration
+var a =2; //global scope merupakan variabel yang dapat di gunakan di mana saja
+ 
+
+function tambah()
 {
-	return a*a*a+b*b*b
+	var b =1 //functio scope merupakan varibael yang hanya bisa di gunakan di function
+
 }
 
-
-alert("Hasil Penjumlahan 2 Kubus = "+volum(8,3));
+console.log(a);

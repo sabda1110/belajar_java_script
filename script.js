@@ -1,14 +1,15 @@
-function menampilkan(a)
-{
-	if(a==0)
-	{
-		return 1;  //base case untuk memberhentikan rekursif
-	}
-	
-	return a * menampilkan(a-1); //rekursif (memanggil diri nya lagi)
-}
+var nama =["Sabda","Bombom","Rahmad"];
+
+// for(var i=0;i<nama.length;i++)
+// {
+// 	console.log(nama[i]);
+// }
 
 
-var hasil = menampilkan(5);
+//nama.push("Ari"); //memberikan nilai baru di ahkir array
+//nama.pop(); //menghapus nilai array yang terahkir
+//nama.unshift("ustad"); //memberikan nilai baru di depan array
+//nama.shift(); //menghapus nilai array yang di awal
 
-console.log(hasil)
+console.log(nama.join(" - "));
+

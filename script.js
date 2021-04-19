@@ -59,10 +59,27 @@ var nama =["Sabda","Bombom","Rahmad","ari","Fauzi"];
  // console.log(angka2.join('-'));
 
 // 11.Find
-var angka=[5,6,3,2,1,4,1,20,30];
-var angka2=angka.find(function(e)
-{
-	return e>5;
-});
+// var angka=[5,6,3,2,1,4,1,20,30];
+// var angka2=angka.find(function(e)
+// {
+// 	return e>5;
+// });
+// console.log(angka2);
 
-console.log(angka2);
+// Belajar Object
+
+//1. Cara 1 - Menggunakan Function
+  // function halo()
+  // {
+  // 	console.log("Halo Sabda");
+  // }
+
+  // halo();
+
+  var obj = {};
+  obj.halo = function(){
+  	console.log("Halo Sabda");
+  }
+  obj.halo();
+
+

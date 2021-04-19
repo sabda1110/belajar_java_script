@@ -73,13 +73,25 @@ var nama =["Sabda","Bombom","Rahmad","ari","Fauzi"];
   // {
   // 	console.log("Halo Sabda");
   // }
-
   // halo();
 
-  var obj = {};
-  obj.halo = function(){
-  	console.log("Halo Sabda");
-  }
-  obj.halo();
 
+//2. Cara 2  - Menggunakan objec literatur
+  // var obj = {};
+  // obj.halo = function(){
+  // 	console.log("Halo Sabda");
+  // }
+  // obj.halo();
+
+//3. cara 3 -Constructor // penamaan object didepan nya menggunakan huruf besar
+   // function Halo(){
+   // 	console.log("Halo Sabda");
+   // }
+   // new Halo();
+
+
+// konsep this
+// konsep this pada cara satu merupakan scope global
+// konsep this pada cara dua mengembalikan object nya
+// konsep this pada cara 3 mengembalikan nilai baru nya
 

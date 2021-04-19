@@ -1,57 +1,37 @@
-var penumpang=['Sabda',undefined,'Fahri'];
-
-var tambahpenumpang = function(namapenumpang,penumpang)
+function Angkot(supir,jalur,penumpang,kas)
 {
-	if(penumpang.length == 0)
+	this.supir=supir;
+	this.jalur=jalur;
+	this.penumpang=penumpang;
+	this.kas=kas;
+
+	this.penumpnagNaik =function(namapenumpang)
 	{
-      penumpang.push(namapenumpang);
-      return penumpang;
+		this.penumpang.push(namapenumpang);
+		return this.penumpang;
 	}
 
-	else
+
+	this.penumpnagTurun= function(namapenumpang,bayar)
 	{
-		for(var i=0;i<penumpang.length;i++)
+		if(this.penumpang.length == 0)
 		{
-			if(penumpang[i]==undefined)
+			alert("Penumpang Kosong");
+			return false;
+		}
+		for(var i =0 ; i<this.penumpang.length;i++ )
+		{
+			if(this.penumpang[i]==namapenumpang)
 			{
-				penumpang[i]=namapenumpang;
-				return penumpang;
-			}
-			else if (penumpang[i]==namapenumpang)
-			{
-				console.log(namapenumpang +'Nama tersebut telah tersedia di angkot');
-				return penumpang;
-			}
-			else if (i == penumpang.length -1 )
-			{
-				penumpang.push(namapenumpang);
-				return penumpang;
+				this.penumpang[i]=undefined ;
+				this.kas+=bayar;
+				return this.penumpang;
 			}
 		}
 	}
 }
 
-var hapuspenumpang = function(namapenumpang,penumpang)
-{
-	if (penumpang.length ==0 )
-	{
-		console.log("Penumpang Kosong");
-		return penumpang;
-	}
-	else
-	{
-		for(var i=0;i<penumpang.length;i++)
-		{
-			if(namapenumpang == penumpang[i])
-			{
-				penumpang[i] = undefined;
-				return penumpang;
-			}
-			else if(i == penumpang.length -1)
-			{
-              console.log(namapenumpang + " Nama tersebut tidak tersedia");
-              return penumpang;
-			}
-		}
-	}
-}
+var angkot1= new Angkot('Sabda',['Tangor','Anur'],[],0);
+var angkot2=new Angkot('Sadar',['badak','harapan raya'],[],0);
+
+ 

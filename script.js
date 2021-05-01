@@ -1,97 +1,48 @@
-var nama =["Sabda","Bombom","Rahmad","ari","Fauzi"];
+// //1. Objek Literal
 
-// for(var i=0;i<nama.length;i++)
-// {
-// 	console.log(nama[i]);
+// let mahasiswa = {
+//   nama : 'Sabda',
+//   energi : 10,
+//   makan:function(porsi)
+//   {
+//     this.energi += porsi;
+//     console.log(`Helo ${this.nama} , Selamat Makan`);
+//   }
 // }
 
-// 1.push
-//nama.push("Ari"); //memberikan nilai baru di ahkir array
 
-// 2.pop
-//nama.pop(); //menghapus nilai array yang terahkir
+//2. Function Declarasi
 
-// 3.unshift
-//nama.unshift("ustad"); //memberikan nilai baru di depan array
+// function Mahasiswa(nama,energi){
+//   let mahasiswa={};
+//   mahasiswa.nama=nama;
+//   mahasiswa.energi=energi;
+//   mahasiswa.makan = function(porsi)
+//   {
+//     this.energi+=porsi;
+//     console.log(`Hello ${this.nama},Selamat Makan Bro`);
+//   }
+//   return mahasiswa;
+// }
 
-// 4.shift
-//nama.shift(); //menghapus nilai array yang di awal
-
-// 5.spliece
-//namaarray.spliece(indexawal,elemet yang mau di hapus,element baru);
-//nama.splice(2,0,"Fahri");
-
-// 6.slice
-// var baru =nama.slice(1,4); //membuat array baru kegunaan slice
-// console.log(nama.join(" - "));
-// console.log(baru.join(" - "));
-
-// 7.ForEach
-// nama.forEach(function(e,i)
-// {
-// 	console.log("Nama Mahasiswa ke - "+(i+1) + "Adalah = "+e);
-// });
+// Pemanggilan Objeck
+// let sabda = Mahasiswa('Sabda',10);
 
 
-// 8.map
-// var angka=[1,2,3,4,5];
-// var angka1=angka.map(function(e)
-// {
-//    return e*2;
-// });
-// console.log(angka1.join("-"));
-
-// 9. sort
-// var angka=[5,6,3,2,1,4,1,20,30];
-// angka.sort(function(a,b)
-// 	{
-// 		return a-b;
-// 	});
-// console.log(angka.join("-"));
-
-// 10.filter
- // var angka=[5,6,3,2,1,4,1,20,30];
-
- // var angka2=angka.filter(function(e)
- // {
- // 	return e >=5 ;
- // });
- // console.log(angka2.join('-'));
-
-// 11.Find
-// var angka=[5,6,3,2,1,4,1,20,30];
-// var angka2=angka.find(function(e)
-// {
-// 	return e>5;
-// });
-// console.log(angka2);
-
-// Belajar Object
-
-//1. Cara 1 - Menggunakan Function
-  // function halo()
-  // {
-  // 	console.log("Halo Sabda");
-  // }
-  // halo();
 
 
-//2. Cara 2  - Menggunakan objec literatur
-  // var obj = {};
-  // obj.halo = function(){
-  // 	console.log("Halo Sabda");
-  // }
-  // obj.halo();
+//3. Cunstuctor Function
 
-//3. cara 3 -Constructor // penamaan object didepan nya menggunakan huruf besar
-   // function Halo(){
-   // 	console.log("Halo Sabda");
-   // }
-   // new Halo();
+function Mahasiswa(nama,energi){
+  this.nama=nama;
+  this.energi=energi;
+  this.makan = function(porsi)
+  {
+    this.energi+=porsi;
+    console.log(`Hello ${this.nama},Selamat Makan Bro`);
+  }
+  
+}
 
-
-// konsep this
-// konsep this pada cara satu merupakan scope global
-// konsep this pada cara dua mengembalikan object nya
-// konsep this pada cara 3 mengembalikan nilai baru nya
-
+// Pemanggilan Objeck
+let sabda = new Mahasiswa('Sabda',10);

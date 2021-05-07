@@ -1,41 +1,41 @@
-//Versi Prototype
-// function mahasiswa(nama,energi)
+//closuer
+// function panggilan()
 // {
-//   //let Mahasiswa=object.create(mahasiswa.prototype) yang terjadi di balik layar
-//   this.nama=nama;
-//   this.energi=energi;
-// }
-// mahasiswa.prototype.makan = function(porsi)
-// {
-//   this.energi+=porsi;
-//   return `Helo ${this.nama},Selamat Makan`;
-// }
-// mahasiswa.prototype.main = function(jam)
-// {
-//   this.energi-=jam;
-//   return`Helo ${this.nama},Selamat Bermain`;
+//   let nama = 'Sabda'
+//   function pendidikan()
+//   {
+//     console.log(`Helo ${nama}`);
+//   }
+//   pendidikan()
 // }
 
-// let sabda = new mahasiswa('Sabda',10);
+// panggilan()
 
 
-//Versi Class
-class mahasiswa{
-  constructor(nama,energi)
-  {
-    this.nama=nama;
-    this.energi=energi;
-  }
-  makan(porsi)
-  {
-    this.energi+=porsi;
-    return`Helo ${this.nama},Selamat Makan`;
-  }
-  main(jam)
-  {
-    this.energi-=jam;
-    return`Helo ${this.nama},Selamat Bermain`;
-  }
-}
+//1 . function factories
 
-let siswa1 = new mahasiswa('sabda',10);
+// function waktu(jam)
+// {
+//   return function nama(nama)
+//   {
+//     console.log(`Helo ${nama},sekarang waktu ${jam}`)
+//   }
+// }
+
+// let selamatpagi=waktu('pagi');
+// selamatpagi('Sabda');
+
+//2. Private Metod
+let add =  (function()
+{
+  let angka = 0;
+  return function looping()
+  {
+    return ++angka;
+  }
+})(); //supaya dia tidak di simpan dalam nilai
+
+console.log(add());
+console.log(add());
+
+

@@ -1,41 +1,70 @@
-//closuer
-// function panggilan()
-// {
-//   let nama = 'Sabda'
-//   function pendidikan()
-//   {
-//     console.log(`Helo ${nama}`);
-//   }
-//   pendidikan()
+
+//function expression biasa
+// let panggil = function(nama){
+// 	return `Hello, ${nama}`
 // }
+// console.log(panggil('Sabda'));
 
-// panggilan()
+
+//function arrow function
+// let panggil =(nama)=>{return `Hello,${nama}`}
+
+// console.log(panggil('Sabda'));
 
 
-//1 . function factories
+//implisit return
+// let panggil = nama=> `Haloha,${nama}`;
 
-// function waktu(jam)
-// {
-//   return function nama(nama)
-//   {
-//     console.log(`Helo ${nama},sekarang waktu ${jam}`)
-//   }
-// }
+// console.log(panggil('Sabda'));
 
-// let selamatpagi=waktu('pagi');
-// selamatpagi('Sabda');
 
-//2. Private Metod
-let add =  (function()
-{
-  let angka = 0;
-  return function looping()
-  {
-    return ++angka;
-  }
-})(); //supaya dia tidak di simpan dalam nilai
 
-console.log(add());
-console.log(add());
+//masalah baru
+
+// - menggunakan map biasa
+ let mahasiswa = ['sabda setiawan','Rahmat Ardiansyah','Ibnumea Akbari'];
+
+// let nama=mahasiswa.map(function(nama){
+// 	return nama.length;
+// });
+
+// console.log(nama);
+
+// - menggunakan arrow function
+
+// let nama=mahasiswa.map(nama => nama.length);
+// console.log(nama);
+
+// -mencari nama dan jumlah karakter
+
+let nama = mahasiswa.map(nama => ({nama:nama,jumlah_karakter:nama.length}));
+// console.log(nama);
+console.table(nama); //supaya terlihat menjadi table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

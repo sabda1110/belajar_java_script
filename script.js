@@ -1,45 +1,25 @@
+// Selector DOM
 
-//function expression biasa
-// let panggil = function(nama){
-// 	return `Hello, ${nama}`
-// }
-// console.log(panggil('Sabda'));
-
-
-//function arrow function
-// let panggil =(nama)=>{return `Hello,${nama}`}
-
-// console.log(panggil('Sabda'));
+// 1.getElementById()
+const judul = document.getElementById('judul');
+judul.style.color='red';
+judul.style.backgroundColor="black";
 
 
-//implisit return
-// let panggil = nama=> `Haloha,${nama}`;
+// 2. getElementsByTagName()
+const paragraf = document.getElementsByTagName('p');
+for(let i=0;i<paragraf.length;i++){
+    paragraf[i].style.backgroundColor='lightblue';
+}
 
-// console.log(panggil('Sabda'));
+
+//3. getElementsByClassName()
+const paragraf1 = document.getElementsByClassName('p1')[0];
+paragraf1.style.fontStyle='italic';
 
 
 
-//masalah baru
 
-// - menggunakan map biasa
- let mahasiswa = ['sabda setiawan','Rahmat Ardiansyah','Ibnumea Akbari'];
-
-// let nama=mahasiswa.map(function(nama){
-// 	return nama.length;
-// });
-
-// console.log(nama);
-
-// - menggunakan arrow function
-
-// let nama=mahasiswa.map(nama => nama.length);
-// console.log(nama);
-
-// -mencari nama dan jumlah karakter
-
-let nama = mahasiswa.map(nama => ({nama:nama,jumlah_karakter:nama.length}));
-// console.log(nama);
-console.table(nama); //supaya terlihat menjadi table
 
 
 
